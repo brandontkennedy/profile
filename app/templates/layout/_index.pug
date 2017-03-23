@@ -1,0 +1,14 @@
+doctype html
+html(lang="en")
+  head
+    include _head
+
+  body(itemscope='', itemtype='http://schema.org/WebPage')
+    include _header
+
+    main.s-main
+      .c-background
+        //- video.c-background__video.js-video(src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/186175/test-video.mov', loop, muted)
+        img.c-background__image(src='images/backgrounds/profile-bg-bw@1x.png', srcset='images/backgrounds/profile-bg-bw@1x.png 1x, images/backgrounds/profile-bg-bw@2x.png 2x')
+
+      include _content
