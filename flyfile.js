@@ -44,6 +44,7 @@ module.exports = {
         presets: ['es2015']
       })
       .target(`${__dirname}/dist`)
+      .start('jsdeploy')
   },
 
   *jswatch(fly) {
@@ -70,12 +71,17 @@ module.exports = {
   // style functions
   *styles(fly) {
     yield fly
-      .source(`${__dirname}/app/**/*.scss`)
+      .source(`${__dirname}/app/**/!(_)*.scss`)
       .sass({
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
+        includePaths: [
+          `${__dirname}/app/styles`,
+          `${__dirname}/node_modules/scss-color`,
+        ]
       })
       .autoprefixer()
       .target(`${__dirname}/dist`)
+      .start('stylesdeploy')
   },
 
   *styleswatch(fly) {
@@ -106,11 +112,14 @@ module.exports = {
   // template functions
   *templates(fly) {
     yield fly
-      .source(`${__dirname}/app/templates/**/*.pug`)
+      .source(`${__dirname}/app/templates/**/!(_)*.pug`)
       .pug({
         pretty: true
       })
-      .target(`${__dirname}/dist`)
+      .rename((file) => {
+        file.dirname = file.dirname.replace('app/templates', 'dist')
+      })
+      .target('')
   },
 
   *templateswatch(fly) {
