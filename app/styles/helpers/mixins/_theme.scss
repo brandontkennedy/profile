@@ -9,8 +9,7 @@
   }
   
   .c-link:hover {
-    color: color(white);
-    text-shadow: 0 0 0.2rem $color;
+    text-shadow: 0 0.2rem 0 color(white);
   }
 
   // theme background color
@@ -31,7 +30,6 @@
   }
 
   .c-link:hover svg {
-    fill: color(white);
-    filter: drop-shadow(0 0 0.2rem $color);
+    filter: drop-shadow(0 0.2rem 0 white);
   }
 }
