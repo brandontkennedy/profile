@@ -26,6 +26,7 @@
     "http-server": "^0.9.0",
     "rollup-plugin-babel": "^2.7.1",
     "rollup-plugin-commonjs": "^8.0.2",
-    "rollup-plugin-node-resolve": "^2.0.0"
+    "rollup-plugin-node-resolve": "^2.0.0",
+    "scss-color": "tjbenton/scss-color"
   }
 }
