@@ -1,0 +1,39 @@
+$color-settings: (
+  'colors': (
+    'a': ( 0: #333333 ),
+    'b': ( 0: #aa33cc ), // purple
+    'c': ( 0: #2988df ), // blue
+    'd': ( 0: #24cc8c ), // green
+    'e': ( 0: #ff9c20 ), // orange
+    'f': ( 0: #ee32c0 ), // pink
+  )
+);
+@include define-color-set;
+
+$color-theme-history: color(d);
+$color-theme-skill: color(c);
+$color-theme-work: color(e);
+$color-theme-contact: color(b);
+
+$color-header-bg: color(black, -2);
+$color-header-text: color(white);
+
+$rem-base: 10px;
+
+$spacing: 1rem;
+
+$screen-lg-min: 960px;
+$screen-md-max: 959px;
+$screen-md-min: 768px;
+$screen-sm-max: 767px;
+$screen-sm-min: 480px;
+$screen-xs-max: 479px;
+$screen-xs-min: 320px;
+
+$body-padding: $spacing * 2;
+
+$header-height: 5rem;
+
+$sidebar-width: rem($screen-xs-min) - ($body-padding * 2);
+
+$transition: all 0.3s ease-out;

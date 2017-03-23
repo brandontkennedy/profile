@@ -1,0 +1,7 @@
+@include buildTheme('t-contact', $color-theme-contact);
+
+@media (min-width: $screen-md-min) {
+  .c-nav-indicator__item.t-contact.is-current {
+    flex-grow: 1;
+  }
+}

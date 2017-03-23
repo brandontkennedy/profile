@@ -1,0 +1,15 @@
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+@function em($px, $base: 16) {
+  @return (strip-unit($px) / $base) * 1em;
+}
+
+@function rem-to-px($rem, $base: $rem-base) {
+  @return (strip-unit($rem) * strip-unit($base)) * 1px;
+}
+
+@function rem($px, $base: $rem-base) {
+  @return (strip-unit($px) / strip-unit($base)) * 1rem;
+}

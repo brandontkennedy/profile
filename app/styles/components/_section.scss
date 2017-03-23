@@ -1,0 +1,19 @@
+.c-section {
+  margin-bottom: (-$header-height + $spacing);
+  padding-top: ($header-height + $spacing);
+
+  &__content {
+    background-color: rgba(color(white), 0.8);
+    box-shadow: 0 1em 1em -1em;
+    padding: $spacing;
+    position: relative;
+  }
+
+  &__header {
+    border-top: 0.5em solid;
+    display: flex;
+    justify-content: space-between;
+    margin: -#{$spacing / 2} -#{$spacing / 2} $spacing;
+    padding: 0 #{$spacing / 2};
+  }
+}

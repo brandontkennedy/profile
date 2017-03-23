@@ -1,0 +1,10 @@
+.s-header {
+  background-color: $color-header-bg;
+  color: $color-header-text;
+  left: 0;
+  padding: $spacing $body-padding;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+}

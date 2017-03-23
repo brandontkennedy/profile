@@ -1,0 +1,11 @@
+.c-button {
+  border: 1px solid;
+  background-color: transparent;
+  display: inline-block;
+  padding: ($spacing / 2) $spacing;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    background-color: color(white);
+  }
+}

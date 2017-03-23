@@ -1,0 +1,37 @@
+@mixin buildTheme($class, $color) {
+  // theme text color
+  .c-button,
+  .c-link,
+  .o-list-item:before {
+    .#{$class} & {
+      color: $color;
+    }
+  }
+  
+  .c-link:hover {
+    color: color(white);
+    text-shadow: 0 0 0.2rem $color;
+  }
+
+  // theme background color
+  .c-nav-indicator__item.#{$class} {
+    background-color: $color;
+  }
+
+  // theme border color
+  .#{$class} .c-section__header,
+  .c-nav-item .c-link.#{$class} {
+    border-color: $color;
+  }
+
+  // svg links
+  .c-link svg {
+    fill: $color;
+    transition: $transition;
+  }
+
+  .c-link:hover svg {
+    fill: color(white);
+    filter: drop-shadow(0 0 0.2rem $color);
+  }
+}

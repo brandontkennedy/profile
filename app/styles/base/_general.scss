@@ -1,0 +1,33 @@
+* {
+  &, &:before, &:after {
+    box-sizing: border-box;
+    &, &:focus, &:active, &:focus:active {
+      outline: none;
+    }
+  }
+}
+
+html {
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/triangles.png') repeat fixed;
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+  padding: $body-padding;
+}
+
+h1,
+h2,
+h3,
+a {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  transition: $transition;
+}

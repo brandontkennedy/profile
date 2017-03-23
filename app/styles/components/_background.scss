@@ -1,0 +1,27 @@
+.c-background {
+  height: 100vh;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: -1;
+
+  &:after {
+    background-color: rgba(color(black), 0.25);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  &__video,
+  &__image {
+    height: 100vh;
+    object-fit: cover;
+    object-position: 0 0;
+    width: 100vw;
+  }
+}

@@ -1,0 +1,11 @@
+.c-heading {
+  flex: 1 0 auto;
+
+  &, &__options {
+    margin: 1rem 0;
+  }
+
+  &--sub {
+    margin-top: 2rem;
+  }
+}
